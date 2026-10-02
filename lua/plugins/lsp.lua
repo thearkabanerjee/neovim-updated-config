@@ -1,10 +1,12 @@
-return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      progress = {
-        enabled = false,
-      },
-    },
-  },
-}
+-- return {
+--   {
+--     "neovim/nvim-lspconfig",
+--     opts = {
+--       progress = {
+--         enabled = false,
+--       },
+--     },
+--   },
+-- }
+--
+return {}
