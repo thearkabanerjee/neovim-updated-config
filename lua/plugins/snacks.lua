@@ -28,7 +28,9 @@ return {
       picker = {
         sources = {
           explorer = {
-            hidden = true,
+            layout = {
+              hidden = { "input" },
+            },
           },
         },
       },
