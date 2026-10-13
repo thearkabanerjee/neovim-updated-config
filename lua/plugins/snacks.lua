@@ -28,6 +28,8 @@ return {
       picker = {
         sources = {
           explorer = {
+            hidden = true,
+            ignored = true,
             layout = {
               hidden = { "input" },
             },
