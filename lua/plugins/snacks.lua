@@ -97,10 +97,10 @@ return {
           -- FOOTER
           -- ======================================
 
-          {
-            section = "startup",
-            padding = 1,
-          },
+          -- {
+          --   section = "startup",
+          --   padding = 1,
+          -- },
         },
       },
     },
