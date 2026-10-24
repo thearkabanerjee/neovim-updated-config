@@ -16,3 +16,34 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+-- Custom cursor and visual selection colors
+local function set_custom_highlights()
+  -- Cursor color
+  vim.api.nvim_set_hl(0, "Cursor", {
+    fg = "#000000",
+    bg = "#15aabf",
+  })
+
+  -- -- Visual mode selection color
+  -- vim.api.nvim_set_hl(0, "Visual", {
+  --   fg = "ffffff",
+  --   bg = "#5eacd3",
+  -- })
+
+  -- Keep the cursor highlight active in Normal and Insert modes
+  vim.opt.guicursor = table.concat({
+    "n-v-c:block-Cursor",
+    "i-ci-ve:ver25-Cursor",
+    "r-cr:hor20-Cursor",
+  }, ",")
+end
+
+-- Apply after TokyoNight or any other colorscheme loads
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = set_custom_highlights,
+})
+
+-- Apply on startup too
+set_custom_highlights()
